@@ -1,0 +1,3 @@
+model,accuracy,sensitivity,specificity,auc,n_test,baseline_accuracy
+Logistic regression,0.932,0.625,0.98,0.904,118,0.864
+RBF SVM (tuned),0.915,0.438,0.99,0.951,118,0.864

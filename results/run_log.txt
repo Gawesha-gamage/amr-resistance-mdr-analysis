@@ -1,0 +1,24 @@
+# A tibble: 1 x 9
+  n_isolates n_patients n_drug_columns date_min   date_max   n_missing_age
+       <int>      <int>          <int> <chr>      <chr>              <int>
+1       2000        981             40 2002-01-02 2017-12-28             0
+# i 3 more variables: n_missing_gender <int>, n_dup_patient_species_date <int>,
+#   n_species <int>
+Isolates before first-isolate filter: 2000; after: 1281
+MDR defined for 1268 isolates; MDR prevalence 89.2%
+# A tibble: 6 x 5
+  term         odds_ratio ci_low ci_high  p_value
+  <chr>             <dbl>  <dbl>   <dbl>    <dbl>
+1 (Intercept)      18.6   5.67    61.2   1.46e- 6
+2 wardClinical      0.602 0.259    1.4   2.4 e- 1
+3 wardICU           0.644 0.267    1.55  3.28e- 1
+4 age               1     0.989    1.01  8.97e- 1
+5 genderM           0.821 0.565    1.19  2.98e- 1
+6 s_aureus          0.137 0.0878   0.214 1.84e-18
+CIP model: 396 isolates, 10 features, 54 CIP-R (13.6%)
+# A tibble: 2 x 7
+  model          accuracy sensitivity specificity   auc n_test baseline_accuracy
+  <chr>             <dbl>       <dbl>       <dbl> <dbl>  <dbl>             <dbl>
+1 Logistic regr~    0.932       0.625        0.98 0.904    118             0.864
+2 RBF SVM (tune~    0.915       0.438        0.99 0.951    118             0.864
+Analysis complete. Outputs written to results/.
